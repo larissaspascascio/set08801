@@ -1,0 +1,146 @@
+.navigation { 
+    list-style: none;
+    margin:0;
+    background:#1E90F1 ;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+}
+.navigation a {
+    text-decoration: none;
+    display: block;
+    padding: 1 em;
+    color: white;
+}
+
+.navigation a :hover {
+ background-color: darken (purple, 2%) ;
+}
+
+@media all and (max-width: 800px){
+.navigation {
+justify-content: space-around;
+}
+}
+
+@media all and (max-width: 600px){
+    .navigation {
+
+        justify-content: column wrap;
+        padding: 0;
+    }
+}
+
+.navigation a {
+    text-align: center;
+    padding: 10px;
+   
+}
+.navigation li:last-of-type a {
+border-bottom: none;
+}
+
+.flex-container {
+    list-style: none;
+    margin:0;
+    background:#1E90F1 ;
+    color: white;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;  
+}
+.flex-container > div {
+    background-color:#1E90F1 ;
+    color: white;
+    display: flex;
+    flex-flow: row;
+    list-style: none;
+    width: 100px;
+    margin: 20px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 50px;
+}
+   
+
+body {
+    padding: 2 em;
+}
+
+@media all and (mid-width: 800 px){
+    .main { flex: 30 px;}
+    
+}
+
+.begin {
+    list-style: none;
+    margin: 0;
+    font-size: 25px;
+    background: #1E90F1;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+.begin a {
+    text-decoration: none;
+    display: block;
+    padding: 1 em;
+    color: white;
+}
+
+.begin a :hover {
+    background-color: darkblue;
+}
+
+.options{
+    display: flex;
+    flex-direction: row;
+    background-color: #98FB98;
+    justify-content: center;
+}
+
+.options > div {
+    background-color: #1E90F1;
+    width: 300px;
+    margin: 50px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+    color: white;
+}
+
+
+
+    #image-container {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+        align-items: center;
+        
+     }
+     
+     #image-container  img {
+        display: block;
+        width: 400px;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 10%;
+        padding: 10px;
+        margin:10px;
+     }
+     .video-container{
+        width:100%;
+        overflow: hidden;
+    
+     }
+     video{
+        width: 100%;
+        transition: all 0.2s;
+     }
+
+     video :playing{
+        transform: scale(1.1);
+     }
+
+
