@@ -1,0 +1,40 @@
+// Event listener for window scroll event
+window.addEventListener('scroll', function () {
+    // Get the footer element
+    var footer = document.getElementById('myFooter');
+    // Calculate scroll position
+    var scrollPosition = window.innerHeight + window.scrollY;
+    // Get footer position
+    var footerPosition = footer.offsetTop + footer.offsetHeight;
+
+    // Check if scroll position is at or below footer position
+    if (scrollPosition >= footerPosition) {
+        // Set footer opacity to 1
+        footer.style.opacity = 1;
+    } else {
+        // Set footer opacity to 0
+        footer.style.opacity = 0;
+    }
+
+    // Calculate direction of scroll
+    var st = window.pageYOffset || document.documentElement.scrollTop;
+    // Check if scrolling down
+    if (st > lastScrollTop) {
+        // Show footer
+        footer.style.opacity = 1;
+    } else {
+        // Check if above footer and hide if necessary
+        if (scrollPosition < footerPosition) {
+            footer.style.opacity = 0;
+        }
+    }
+    // Update last scroll position
+    lastScrollTop = st <= 0 ? 0 : st;
+});
+
+// Event listener for clicking on image
+let image = document.getElementById("clickableImage");
+image.addEventListener("click", function () {
+    // Redirect to index.html
+    window.location.href = "index.html";
+});
